@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> <!-- Подключение шрифта -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Poppins', sans-serif; /* Шрифт в стиле Instagram */
+        text-align: center;
+        overflow: hidden;
+        flex-direction: column;
+      }
+
+      /* Видео на фоне */
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      /* Неоновый стиль текста с анимацией */
+      .neon-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4, 0 0 25px #ff6ec4, 0 0 30px #ff6ec4;
+        animation: neon 1.5s ease-in-out infinite alternate, fadeIn 2s ease-out;
+        z-index: 1;
+        margin-bottom: 30px;
+      }
+
+      @keyframes neon {
+        0% {
+          text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4, 0 0 25px #ff6ec4, 0 0 30px #ff6ec4;
+        }
+        100% {
+          text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4, 0 0 50px #ff6ec4, 0 0 60px #ff6ec4;
+        }
+      }
+
+      /* Анимация для появления текста */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Стиль кнопки в стиле TikTok */
+      .pulse-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+        height: 80px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(145deg, #ff6ec4, #7873f5);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        animation: pulse 1.5s infinite;
+        z-index: 1;
+      }
+
+      .pulse-button:hover {
+        transform: scale(1.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(145deg, #7873f5, #ff6ec4);
+      }
+
+      .pulse-button:active {
+        transform: scale(0.95);
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+        100% { transform: scale(1); }
+      }
+
+      /* Для мобильных устройств */
+      @media (max-width: 768px) {
+        .neon-text {
+          font-size: 25px;
+          margin-bottom: 15px;
+        }
+
+        .pulse-button {
+          width: 220px;
+          height: 60px;
+          font-size: 18px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="https://raw.githubusercontent.com/deadforlov/tochme/refs/heads/main/0323(7).mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <div class="neon-text">Ready for some hot moments? 😈</div>
+    
+    <a href="https://t.me/Super_Samx" class="pulse-button">
+        Telegram
+    </a>
+</body>
+</html>
